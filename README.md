@@ -1,3 +1,3 @@
 # dictionary
 *command to run
-python3 main.py
+*_python3 main.py_
