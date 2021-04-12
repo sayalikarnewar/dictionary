@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+</head>
+<body>
+
+    <form method="POST" action= "{{url('search')}}" enctype="multipart/form-data">
+        <label>Word ?</label>
+        <input type="text" name="word">
+        <button type="submit">Submit</button>
+    </form>
+
+
+    
+    {% block result %}
+    <div>
+        
+        {%for i in result %}
+        <table>
+            <tr><th>Word</th><td>{{i['word']}}</td></tr>
+            <tr><th>Definition</th><td>{{i['definition']}}</td></tr>
+            <tr><th>PartOfSpeech</th><td>{{i['partOfSpeech']}}</td></tr>
+        {%endfor%}
+        </table>
+    </div>
+    {%endblock%}
+
+    {%block response%}
+    <p> response : {{response}}</p>
+    {%endblock%}
+
+
+</body>
+</html>
