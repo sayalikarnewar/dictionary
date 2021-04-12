@@ -1,11 +1,11 @@
 import aiohttp_jinja2
 import requests
 
-@aiohttp_jinja2.template('mail.html')
+@aiohttp_jinja2.template('main.html')
 async def get_word(request):
     return {}
 
-@aiohttp_jinja2.template('mail.html')
+@aiohttp_jinja2.template('main.html')
 async def search(request):
     form = await request.post()
     word = str(form['word'])
