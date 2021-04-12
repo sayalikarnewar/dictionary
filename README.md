@@ -1,3 +1,3 @@
 ## dictionary web app using DictionaryAPI
-> command to run
-### _python3 main.py_
+Command to run
+> _python3 main.py_
