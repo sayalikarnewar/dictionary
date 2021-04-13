@@ -13,7 +13,7 @@ async def search(request):
     try:
         response_API = requests.get('https://api.dictionaryapi.dev/api/v2/entries/en_US/'+word)
     except Exception:
-        return {'response': 'Can not call dictionaryapi'}
+        return {'response': 'Can not call dictionaryapi or word not appropriate'}
     
     try:
         #get partOfSpeech from json file
